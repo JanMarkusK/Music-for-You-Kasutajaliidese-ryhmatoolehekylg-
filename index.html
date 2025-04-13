@@ -1,11 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interactive Music Filter</title>
+  <link rel="stylesheet" href="headerfooter.css" />
+  <script src="headerfooter.js" defer></script>
 </head>
+<header>
+  <div class="filters-header">
+    <h2 class="filters-title">Filters</h2>
+    <button class="arrow-button" onclick="toggleFilters()">&#9660;</button>
+  </div>
+</header>
+
 <body>
-    
+  <div class="circle top-circle"></div>
+  <header>
+    <!-- Menüüst eemaldasin sign up nupu -->
+  </header>
+
+  <main>
+    <div class="content">
+      <!-- Filters -->
+
+
+      <div class="filters-section" id="filtersSection">
+        <select>
+          <option value="">Select Genre</option>
+          <option value="pop">Pop</option>
+          <option value="rock">Rock</option>
+          <option value="jazz">Jazz</option>
+          <option value="classical">Classical</option>
+        </select>
+        <select>
+          <option value="">Select Language</option>
+          <option value="english">English</option>
+          <option value="spanish">Spanish</option>
+          <option value="french">French</option>
+          <option value="german">German</option>
+        </select>
+        <button>Submit</button>
+      </div>
+
+      <div class="music-note">♪</div>
+
+      <div class="signup-section" id="signupSection">
+        <input type="text" placeholder="Username" />
+        <input type="password" placeholder="Password" />
+        <button>Log In</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="signup-header">
+      <button class="arrow-button" onclick="showSignup()">&#9650;</button>
+      <h2 class="signup-title">Sign Up</h2>
+    </div>
+  </footer>
+  
+
+  <div class="circle bottom-circle"></div>
 </body>
 </html>
