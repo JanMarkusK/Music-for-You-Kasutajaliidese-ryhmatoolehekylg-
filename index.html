@@ -1,13 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="et">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Interactive Box UI</title>
+  <title>Music for You</title>
   <link rel="stylesheet" href="main-styles.css">
   <script src="animations.js"></script>
+  <link rel="stylesheet" href="headerfooter.css">
 </head>
 <body>
+   <header>
+      <span class="header-text">Filters</span>
+      <button class="arrow-button" id="arrow-button"></button>
+      <div class="filters" id="filters">
+        <div class="filter-item">
+          <label for="genre">Genre:</label>
+          <select id="genre">
+            <option value="Classical">Classical</option>
+            <option value="Pop Music">Pop Music</option>
+            <option value="Rock Music">Rock Music</option>
+          </select>
+        </div>
+        <div class="filter-item">
+          <label for="language">Language:</label>
+          <select id="language">
+            <option value="english">English</option>
+            <option value="estonian">Estonian</option>
+            <option value="french">French</option>
+          </select>
+        </div>
+      </div>
+    </header>
+    <div class="circle top" id="top-circle"></div>
+    <div class="cube top" id="top-cube"></div>
+    <div class="cube bottom" id="bottom-cube"></div>
+    <div class="circle bottom" id="bottom-circle"></div>
+
   <div class="main">
    <div class="box-container" id="box">
       <div class="box-half box-top" style="background-image: url('images/music-top.png'); background-size: cover;">
@@ -23,5 +51,23 @@
          </div>
        </div>
    </div>
+
+   
+  <footer>
+    
+   <button class="arrow-button-footer" id="arrow-button-footer"></button>
+   <div class="Sign_up-footer" id="Sign_up-footer">
+     <div class="Sign_up-item">
+       <label for="User-footer">User:</label>
+       <input id="User-footer" type="text" placeholder="username">
+     </div>
+     <div class="Sign_up-item">
+       <label for="Password-footer">Password:</label>
+       <input id="Password-footer" type="text" placeholder="Password">
+     </div>
+   </div>
+   <span class="footer-text">Sign up</span>
+ </footer>
+ <script src="headerfooter.js"></script>
 </body>
 </html>
