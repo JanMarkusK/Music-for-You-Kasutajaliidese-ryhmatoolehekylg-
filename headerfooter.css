@@ -14,20 +14,17 @@ header {
   top: 0;
   width: 100%;
   display: flex;
-  flex-direction: column; /* Paigutame elemendid vertikaalselt */
+  flex-direction: column;
   align-items: center;
   z-index: 10;
-
-.header-text {
-  position: static; /* Eemaldame absoluutsed positsioonid */
-  top: 20px; /* // ei tee midagi?? */
-  color: white; 
-  font-size: 24px; 
-  font-weight: bold; /* // Rasvane tekst */
-  /*font-family: Arial, sans-serif;  // Soovi korral lisa font */
-  z-index: 12; /* // Tekst jääb alati nähtavaks */
-
 }
+header .header-text {
+  position: static;
+  top: 20px;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  z-index: 12;
 }
 
 .arrow-button {
@@ -35,29 +32,26 @@ header {
   border: none;
   cursor: pointer;
   position: relative;
-  padding: 50px; /* // noole alguskoht */
+  padding: 50px;
   outline: none;
   z-index: 11;
-  transition: transform 0.0s ease, top 0.0s ease;
-
-  &::before {
-    content: "";
-    width: 0;
-    height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-top: 15px solid white; /* // kolmnurk üles suunaga */
-    display: inline-block;
-    transition: transform 0.0s ease;
-  }
-
-  &.moved {
-    top: 100px; /* // noole lõppkoht */
-
-    &::before {
-      transform: rotate(180deg); /* // pöörab kolmnurga alla suunaga */
-    }
-  }
+  transition: transform 0s ease, top 0s ease;
+}
+.arrow-button::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 15px solid white;
+  display: inline-block;
+  transition: transform 0s ease;
+}
+.arrow-button.moved {
+  top: 100px;
+}
+.arrow-button.moved::before {
+  transform: rotate(180deg);
 }
 
 .circle {
@@ -66,49 +60,40 @@ header {
   background-color: rgb(63, 63, 63);
   border-radius: 50%;
   position: absolute;
-  transition: transform 0.3s ease; /* // sujuv liikumine */
-
-  &.top {
-    top: -200px;
-
-    &.moved {
-      transform: translateY(100px); /* // liigutame 100px allapoole */
-    }
-  }
-
-  &.bottom {
-    bottom: -200px;
-  }
+  transition: transform 0.3s ease;
 }
-
+.circle.top {
+  top: -200px;
+}
+.circle.top.moved {
+  transform: translateY(100px);
+}
+.circle.bottom {
+  bottom: -200px;
+}
 
 .filters {
-  display: none; /* // Peidetud vaikimisi */
+  display: none;
   flex-direction: column;
   gap: 10px;
-  margin-top: -80px; /* // Vahe noole ja vormi vahel */
+  margin-top: -80px;
   z-index: 10;
-
-  label {
-    color: white; /* // Teksti värv */
-    font-size: 16px;/*  // Teksti suurus */
-  }
-
-  select {
-    background-color: rgb(63, 63, 63);
-    color: white;
-    border: 1px solid #fff;
-    padding: 5px;
-    font-size: 14px;
-    border-radius: 4px;
-  }
-
-  &.visible {
-    display: flex; /* // Kuvame vormi */
-  }
 }
-
-    /*footer*/
+.filters label {
+  color: white;
+  font-size: 16px;
+}
+.filters select {
+  background-color: rgb(63, 63, 63);
+  color: white;
+  border: 1px solid #fff;
+  padding: 5px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+.filters.visible {
+  display: flex;
+}
 
 footer {
   position: absolute;
@@ -118,87 +103,80 @@ footer {
   flex-direction: column;
   align-items: center;
   z-index: 10;
-
-  .footer-text {
-    position: static;
-    margin-bottom: 10px; /* Vahe teksti ja lahtrite vahel */
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
-    z-index: 12;
-  }
 }
+footer .footer-text {
+  position: static;
+  margin-bottom: 10px;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  z-index: 12;
+}
+
 .arrow-button-footer {
   background: none;
   border: none;
   cursor: pointer;
   position: relative;
-  padding: 40px; /* Noole alguskoht */
+  padding: 40px;
   outline: none;
   z-index: 11;
   transition: transform 0.3s ease, top 0.3s ease;
-
-  &::before {
-    content: "";
-    width: 0;
-    height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 15px solid white; /* Kolmnurk üles suunaga */
-    display: inline-block;
-    transition: transform 0.3s ease;
-  }
-
-  &.moved {
-    top: -200px; /* Noole lõppkoht */
-    &::before {
-      transform: rotate(180deg); /* Pöörab kolmnurga alla */
-    }
-  }
+}
+.arrow-button-footer::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 15px solid white;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+.arrow-button-footer.moved {
+  top: -200px;
+}
+.arrow-button-footer.moved::before {
+  transform: rotate(180deg);
 }
 
 .Sign_up-footer {
-  position: absolute; /* Teeb võimalikuks täpse asukoha määramise */
-  bottom: 100px; /* Lahtrid on 100px kõrgemal ekraani alumisest servast */
+  position: absolute;
+  bottom: 100px;
   display: none;
   flex-direction: column;
   gap: 15px;
   margin-top: 0;
   z-index: 10;
-  
-
-  .Sign_up-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
-    label {
-      color: white;
-      font-size: 16px;
-    }
-
-    input  {
-      background-color: rgb(63, 63, 63);
-      color: white;
-      border: 1px solid #fff;
-      padding: 5px;
-      font-size: 14px;
-      border-radius: 4px;
-      width: 150px;
-    }
-  }
-  input::placeholder {
-    color: lightgray; /* Placeholder tekst heledama värviga */
-  }
-
-  &.visible {
-    display: flex; /* Kuvame vormi */
-  }
+}
+.Sign_up-footer .Sign_up-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.Sign_up-footer .Sign_up-item label {
+  color: white;
+  font-size: 16px;
+}
+.Sign_up-footer .Sign_up-item input {
+  background-color: rgb(63, 63, 63);
+  color: white;
+  border: 1px solid #fff;
+  padding: 5px;
+  font-size: 14px;
+  border-radius: 4px;
+  width: 150px;
+}
+.Sign_up-footer input::placeholder {
+  color: lightgray;
+}
+.Sign_up-footer.visible {
+  display: flex;
 }
 
 .circle.bottom {
   position: absolute;
-  bottom: -200px; /* Alguskoht allpool */
+  bottom: -200px;
   left: 50%;
   transform: translateX(-50%);
   width: 300px;
@@ -206,9 +184,10 @@ footer {
   background-color: rgb(63, 63, 63);
   border-radius: 50%;
   z-index: 1;
-  transition: bottom 0.5s ease; /* Sujuv animatsioon */
+  transition: bottom 0.5s ease;
+}
+.circle.bottom.moved {
+  bottom: 0;
 }
 
-.circle.bottom.moved {
-  bottom: 0; /* Lõppkoht - liigub 200px ülespoole */
-}
+/*# sourceMappingURL=headerfooter.css.map */
