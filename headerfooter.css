@@ -61,6 +61,7 @@ header .header-text {
   border-radius: 50%;
   position: absolute;
   transition: transform 0.3s ease;
+  z-index: 1;
 }
 .circle.top {
   top: -200px;
@@ -200,6 +201,7 @@ footer .footer-text {
   border-radius: 20%;
   position: absolute;
   transition: transform 0.3s ease;
+  z-index: 1;
 }
 .cube.top {
   top: -300px;
