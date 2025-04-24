@@ -134,7 +134,7 @@ footer .footer-text {
   transition: transform 0.3s ease;
 }
 .arrow-button-footer.moved {
-  top: -200px;
+  top: -100px;
 }
 .arrow-button-footer.moved::before {
   transform: rotate(180deg);
@@ -142,7 +142,7 @@ footer .footer-text {
 
 .Sign_up-footer {
   position: absolute;
-  bottom: 100px;
+  bottom: 60px;
   display: none;
   flex-direction: column;
   gap: 15px;
@@ -167,6 +167,9 @@ footer .footer-text {
   border-radius: 4px;
   width: 150px;
 }
+.Sign_up-footer input::-moz-placeholder {
+  color: lightgray;
+}
 .Sign_up-footer input::placeholder {
   color: lightgray;
 }
@@ -187,7 +190,26 @@ footer .footer-text {
   transition: bottom 0.5s ease;
 }
 .circle.bottom.moved {
-  bottom: 0;
+  bottom: -100px;
 }
 
-/*# sourceMappingURL=headerfooter.css.map */
+.cube {
+  width: 300px;
+  height: 300px;
+  background-color: rgb(63, 63, 63);
+  border-radius: 20%;
+  position: absolute;
+  transition: transform 0.3s ease;
+}
+.cube.top {
+  top: -300px;
+}
+.cube.top.moved {
+  transform: translateY(100px);
+}
+.cube.bottom {
+  bottom: -300px;
+}
+.cube.bottom.moved {
+  transform: translateY(-100px);
+}/*# sourceMappingURL=headerfooter.css.map */
