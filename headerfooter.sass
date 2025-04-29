@@ -181,30 +181,3 @@ footer
 
   &.moved
     bottom: -250px
-
-// Muutujad
-$cube-size: 300px
-$cube-color: rgb(63, 63, 63)
-$transition-duration: 0.3s
-
-// Kuubiku üldine stiil
-.cube
-  width: $cube-size
-  height: $cube-size
-  background-color: $cube-color
-  border-radius: 20%
-  position: absolute
-  transition: transform $transition-duration ease
-  z-index: 1
-
-  &.top
-    top: -300px
-
-    &.moved
-      transform: translateY(100px)
-
-  &.bottom
-    bottom: -300px
-
-    &.moved
-      transform: translateY(-100px)
