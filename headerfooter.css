@@ -55,8 +55,8 @@ header .header-text {
 }
 
 .circle {
-  width: 300px;
-  height: 300px;
+  width: 479px;
+  height: 479px;
   background-color: rgb(63, 63, 63);
   border-radius: 50%;
   position: absolute;
@@ -64,13 +64,13 @@ header .header-text {
   z-index: 1;
 }
 .circle.top {
-  top: -200px;
+  top: -379px;
 }
 .circle.top.moved {
   transform: translateY(100px);
 }
 .circle.bottom {
-  bottom: -200px;
+  bottom: -379px;
 }
 
 .filters {
@@ -180,18 +180,18 @@ footer .footer-text {
 
 .circle.bottom {
   position: absolute;
-  bottom: -200px;
+  bottom: -379px;
   left: 50%;
   transform: translateX(-50%);
-  width: 300px;
-  height: 300px;
+  width: 479px;
+  height: 479px;
   background-color: rgb(63, 63, 63);
   border-radius: 50%;
   z-index: 1;
   transition: bottom 0.5s ease;
 }
 .circle.bottom.moved {
-  bottom: -100px;
+  bottom: -279px;
 }
 
 .cube {
