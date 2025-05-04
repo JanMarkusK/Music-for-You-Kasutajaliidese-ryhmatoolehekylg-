@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {// leiab asjad ja teeb muutujad et funktsioonid all töötaks
     const arrowButton = document.getElementById("arrow-button");
     const topCircle = document.getElementById("top-circle");
     const filters = document.getElementById("filters");
@@ -9,15 +9,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const feedbackLink = document.querySelector("footer p a"); // Leia "Leave Feedback" link
   
     // Ülemine nupp
-    arrowButton.addEventListener("click", () => {
+    arrowButton.addEventListener("click", () => {//siin on headeris olevad asjad mida kuvatakse kui vajutatakse headeris olevale noolele
       arrowButton.classList.toggle("moved");
       topCircle.classList.toggle("moved");
       filters.classList.toggle("visible");
     });
   
     // Alumine nupp
-    arrowButtonFooter.addEventListener("click", () => {
-      arrowButtonFooter.classList.toggle("moved");
+    arrowButtonFooter.addEventListener("click", () => {// siin on footeris olevad asjad mida ta toob nähtavaks või liigutab kui vajutada footeris olevale noolelel.
+      arrowButtonFooter.classList.toggle("moved");//liigutab
       bottomCircle.classList.toggle("moved");
       Sign_upFooter.classList.toggle("visible");
       feedbackLink.classList.toggle("visible"); // Lülita nähtavust

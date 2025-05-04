@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Music for You</title>
-  <link rel="stylesheet" href="main-styles.css">
+  <title>Music for You</title><!-- siin on ttitel -->
+  <link rel="stylesheet" href="main-styles.css"><!-- siin viitab teistele koodidele -->
   <script src="animations.js"></script>
   <link rel="stylesheet" href="headerfooter.css">
   <link rel="icon" type="image/png" href="images/LogoVaike.PNG"> <!-- favicon -->
@@ -12,11 +12,11 @@
 <body>
    <header>
       <div class="header-top">
-         <span class="header-text">Filters</span>
-         <img src="images/LogoVaike.PNG" alt="Logo" class="header-logo" />
+         <span class="header-text">Filters</span><!-- siin on filters text -->
+         <img src="images/LogoVaike.PNG" alt="Logo" class="header-logo" /><!-- siin on logo -->
        </div>
-      <button class="arrow-button" id="arrow-button"></button>
-      <div class="filters" id="filters">
+      <button class="arrow-button" id="arrow-button"></button><!-- siin on headeris olev nool -->
+      <div class="filters" id="filters"><!-- siin on filters kastid ja nende valikud -->
         <div class="filter-item">
           <label for="genre">Genre:</label>
           <select id="genre">
@@ -35,16 +35,16 @@
         </div>
       </div>
     </header>
-    <div class="circle top" id="top-circle"></div>
+    <div class="circle top" id="top-circle"></div><!-- siin on välja toodud headeris ja footeris olevad rinngid -->
     <div class="circle bottom" id="bottom-circle"></div>
 
-  <div class="main">
+  <div class="main"><!-- siin on box kus on noodi pildid peal (ülemine ja alumine) -->
    <div class="box-container" id="box">
       <div class="box-half box-top" style="background-image: url('images/musicNote.png'); background-size: cover; background-position: top;">
       </div>
       <div class="box-half box-bottom" style="background-image: url('images/musicNote.png'); background-size: cover; background-position: bottom;">
       </div>
-      <div class="box-content">
+      <div class="box-content"><!-- siin on box kuhu sisse pannakse spotify lingid muusikatele -->
          <div class="note-box"></div>
          <div class="spotify-wrapper">
             <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3oEkrIfXfSh9zGnE7eBzSV?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
@@ -55,10 +55,10 @@
    </div>
 
    
-  <footer>
+  <footer> <!-- siin on footeris asuvad nupud kastid (kindlas järjekorras), link -->
     
-   <button class="arrow-button-footer" id="arrow-button-footer"></button>
-   <div class="Sign_up-footer" id="Sign_up-footer">
+   <button class="arrow-button-footer" id="arrow-button-footer"></button> <!-- noole nupp -->
+   <div class="Sign_up-footer" id="Sign_up-footer"><!-- siin on sign up kastikesed (user ja password) -->
      <div class="Sign_up-item">
        <label for="User-footer">User:</label>
        <input id="User-footer" type="text" placeholder="username">
@@ -68,10 +68,10 @@
        <input id="Password-footer" type="text" placeholder="Password">
      </div>
    </div>
-   <span class="footer-text">Sign up</span>
-   <p><a href="feedback.html" class="feedback-link">Leave Feedback</a></p>
+   <span class="footer-text">Sign up</span> <!-- text Sign up -->
+   <p><a href="feedback.html" class="feedback-link">Leave Feedback</a></p><!-- link feedback lehele -->
 
  </footer>
- <script src="headerfooter.js"></script>
+ <script src="headerfooter.js"></script><!-- see viitab scriptile mis aitab panna asjad liikuma (ringid ja nooled) ja kus kuvatakse vajalikud asjad-->
 </body>
 </html>

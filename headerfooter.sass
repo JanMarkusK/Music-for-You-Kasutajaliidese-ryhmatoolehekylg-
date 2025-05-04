@@ -8,7 +8,7 @@ body
   overflow: hidden
   position: relative
 
-header
+header //kujundus ja paigutus heqderis
   position: absolute
   top: 0
   width: 100%
@@ -17,26 +17,25 @@ header
   align-items: center
   z-index: 10
 
-  .header-text
+  .header-text //text headeris
     position: static
     top: 20px
     color: white
     font-size: 24px
     font-weight: bold
     z-index: 12
-    
-.header-top
+.header-top //paigutus
   display: flex
   align-items: center
   gap: 10px
   margin-top: 2px
   z-index: 12
 
-.header-logo
+.header-logo //logo
   width: 30px
   height: 30px
 
-.arrow-button
+.arrow-button //noole paigutus suurused liikumised
   background: none
   border: none
   cursor: pointer
@@ -46,7 +45,7 @@ header
   z-index: 11
   transition: transform 0.0s ease, top 0.0s ease
 
-  &::before
+  &::before //kuidas on nool enne
     content: ""
     width: 0
     height: 0
@@ -56,13 +55,13 @@ header
     display: inline-block
     transition: transform 0.0s ease
 
-  &.moved
+  &.moved //kaugele liigub
     top: 100px
 
     &::before
       transform: rotate(180deg)
 
-.circle
+.circle //ring headeris (suurus paigutus värvus kui peal/all)
   width: 479px
   height: 479px
   background-color: rgb(63, 63, 63)
@@ -74,13 +73,13 @@ header
   &.top
     top: -379px
 
-    &.moved
+    &.moved //liikumine
       transform: translateY(129px)
 
   &.bottom
     bottom: -350px
 
-.filters
+.filters //filters kasti paigutused
   display: none
   flex-direction: column
   gap: 10px
@@ -91,7 +90,7 @@ header
     color: white
     font-size: 16px
 
-  select
+  select //filters värvid ja suurused
     background-color: rgb(63, 63, 63)
     color: white
     border: 1px solid #fff
@@ -102,16 +101,16 @@ header
   &.visible
     display: flex
 
-footer
-  position: absolute
-  bottom: 0
-  width: 100%
-  display: flex
-  flex-direction: column
-  align-items: center
-  z-index: 10
+footer //footers paigutus 
+    position: absolute
+    bottom: 0
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    z-index: 10
 
-  .footer-text
+  .footer-text //signup teksti paigutus suurus värvus
     position: static
     margin-bottom: 10px
     color: white
@@ -119,7 +118,7 @@ footer
     font-weight: bold
     z-index: 12
 
-.arrow-button-footer
+.arrow-button-footer //nool footersis
   background: none
   border: none
   cursor: pointer
@@ -129,7 +128,7 @@ footer
   z-index: 11
   transition: transform 0.3s ease, top 0.3s ease
 
-  &::before
+  &::before //enne vajutaist paigutus ja kiirus
     content: ""
     width: 0
     height: 0
@@ -139,13 +138,13 @@ footer
     display: inline-block
     transition: transform 0.3s ease
 
-  &.moved
+  &.moved //liikumise kaugus
     top: -100px
 
-    &::before
+    &::before //pööramine
       transform: rotate(180deg)
 
-.Sign_up-footer
+.Sign_up-footer //signup teksti paigutus värvus ja suurus
   position: absolute
   bottom: 60px
   display: none
@@ -165,7 +164,7 @@ footer
       color: white
       font-size: 16px
 
-    input
+    input //sing up kasti ja sellega seotud värvid paigutus suurus
       background-color: rgb(63, 63, 63)
       color: white
       border: 1px solid #fff
@@ -180,7 +179,7 @@ footer
   &.visible
     display: flex
 
-.circle.bottom
+.circle.bottom // footeris oleva rinfi suurus liikumine paigutus värvus
   position: absolute
   bottom: -379px
   left: 50%
@@ -195,7 +194,7 @@ footer
   &.moved
     bottom: -250px
 
-.feedback-link
+.feedback-link //feedback lingi paigutus, suurus,  nähtavus, värvus
   display: none
   color: white
   text-decoration: none
