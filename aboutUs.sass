@@ -1,0 +1,75 @@
+// Defineerib värvimuutujad, mida kasutatakse hiljem koodis
+$black: #000
+$white: #fff
+$gray: #ccc
+$dark-gray: #333
+
+// Globaalne stiil, mis rakendub kõigile elementidele
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+body // Keha stiilid
+
+    font-family: sans-serif
+    background-color: $black
+    color: $white
+    min-height: 100vh
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 1rem
+
+.about-page
+    width: 100%
+    max-width: 480px
+    display: flex
+    justify-content: center
+
+.about-container
+    display: flex
+    flex-direction: column
+    gap: 1rem
+    background-color: $dark-gray
+    padding: 2rem
+    border-radius: 8px
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2)
+
+.headeresque // .headeresque klassi stiilid (pealkirja ja logo paigutus)
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: 0.5rem
+
+    h1
+        font-size: 1.5rem
+        color: $white
+        margin: 0
+
+    .header-logo
+        width: 40px
+        height: 40px
+
+.about-content // kasti stiilid
+    p
+        margin-bottom: 1rem
+        line-height: 1.5
+        color: $white
+
+    strong
+        color: $gray
+
+    // .back-link klassi stiilid (tagasi lingi stiil)
+
+.back-link
+    display: block
+    text-align: center
+    color: $gray
+    text-decoration: none
+    font-size: 1rem
+    margin-top: 1rem
+
+    &:hover     // Hover efekt lingi puhul
+        text-decoration: underline

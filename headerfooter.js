@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {// leiab asjad ja teeb muut
     const arrowButton = document.getElementById("arrow-button");
     const topCircle = document.getElementById("top-circle");
     const filters = document.getElementById("filters");
+    const aboutLink = document.getElementById("about-link"); // Leia About Us link
   
     const arrowButtonFooter = document.getElementById("arrow-button-footer");
     const bottomCircle = document.getElementById("bottom-circle");
@@ -13,6 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {// leiab asjad ja teeb muut
       arrowButton.classList.toggle("moved");
       topCircle.classList.toggle("moved");
       filters.classList.toggle("visible");
+      aboutLink.classList.toggle("visible"); // Lülita About Us lingi nähtavus
+
     });
   
     // Alumine nupp
