@@ -1,72 +1,87 @@
+//Muutujad värvide jaoks, tegelikult mõttetu imo
 $black: #000
 $white: #fff
 $gray: #ccc
 $dark-gray: #333
 
 *
-  margin: 0
-  padding: 0
-  box-sizing: border-box
-
+   margin: 0
+   padding: 0
+   box-sizing: border-box
+//Paigutab kõik lehe keskele
 body
-  font-family: sans-serif
-  background-color: $black
-  color: $white
-  height: 100vh
-  display: flex
-  align-items: center
-  justify-content: center
+   font-family: sans-serif
+   background-color: $black
+   color: $white
+   height: 100vh
+   display: flex
+   align-items: center
+   justify-content: center
 
 .feedback-page
-  width: 100%
-  max-width: 600px
-  padding: 2rem
+   width: 100%
+   max-width: 600px
+   padding: 2rem
 
+//Paigutab body elemendid õigetesse kohtadesse ja õige suurusega
 .feedback-form
-  display: flex
-  flex-direction: column
-  gap: 1rem
-  background-color: $dark-gray
-  padding: 2rem
-  border-radius: 8px
+   display: flex
+   flex-direction: column
+   gap: 1rem
+   background-color: $dark-gray
+   padding: 2rem
+   border-radius: 8px
 
-  h1
-    text-align: center
-    color: $white
+   .headeresque
+      display: flex
+      align-items: center
+      justify-content: center
+      position: relative
 
-  label
-    color: $white
-    font-size: 1rem
+      h1
+         position: absolute
+         left: 50%
+         transform: translateX(-50%)
+         margin: 0 auto
 
-  textarea
-    resize: vertical
-    padding: 0.5rem
-    border: 1px solid $gray
-    border-radius: 4px
-    background-color: $black
-    color: $white
+      .header-logo
+         margin-left: auto
+         width: 30px
+         height: 30px
+   
+   label
+      color: $white
+      font-size: 1rem
 
-  .actions
-    display: flex
-    justify-content: space-between
-    align-items: center
-
-    button
-      padding: 0.5rem 1rem
-      background-color: $white
-      color: $black
-      border: none
+   textarea
+      resize: vertical
+      padding: 0.5rem
+      border: 1px solid $gray
       border-radius: 4px
-      cursor: pointer
-      transition: background 0.2s ease
+      background-color: $black
+      color: $white
 
-      &:hover
-        background-color: $gray
+   .actions
+      display: flex
+      justify-content: space-between
+      align-items: center
 
-    .back-link
-      color: $gray
-      text-decoration: none
-      font-size: 0.9rem
+      button
+         padding: 0.5rem 1rem
+         background-color: $white
+         color: $black
+         border: none
+         border-radius: 4px
+         cursor: pointer
+         transition: background 0.2s ease
 
-      &:hover
-        text-decoration: underline
+         &:hover
+         background-color: $gray
+
+      .back-link
+         color: $gray
+         text-decoration: none
+         font-size: 0.9rem
+
+         &:hover
+         text-decoration: underline

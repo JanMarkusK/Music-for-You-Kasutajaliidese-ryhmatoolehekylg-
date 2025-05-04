@@ -28,9 +28,22 @@ body {
   padding: 2rem;
   border-radius: 8px;
 }
-.feedback-form h1 {
-  text-align: center;
-  color: #fff;
+.feedback-form .headeresque {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.feedback-form .headeresque h1 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0 auto;
+}
+.feedback-form .headeresque .header-logo {
+  margin-left: auto;
+  width: 30px;
+  height: 30px;
 }
 .feedback-form label {
   color: #fff;
@@ -57,15 +70,11 @@ body {
   border-radius: 4px;
   cursor: pointer;
   transition: background 0.2s ease;
-}
-.feedback-form .actions button:hover {
   background-color: #ccc;
 }
 .feedback-form .actions .back-link {
   color: #ccc;
   text-decoration: none;
   font-size: 0.9rem;
-}
-.feedback-form .actions .back-link:hover {
   text-decoration: underline;
 }/*# sourceMappingURL=feedbackStyle.css.map */
