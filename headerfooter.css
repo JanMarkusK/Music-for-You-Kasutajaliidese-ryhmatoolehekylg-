@@ -160,7 +160,8 @@ footer .footer-text {
   display: none;
   flex-direction: column;
   gap: 15px;
-  margin-top: 0;
+  margin-bottom: 20px;
+  margin-top: 0px;
   z-index: 10;
 }
 .Sign_up-footer .Sign_up-item {
@@ -205,4 +206,17 @@ footer .footer-text {
 }
 .circle.bottom.moved {
   bottom: -250px;
+}
+
+.feedback-link {
+  display: none;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: opacity 0.3s ease;
+  margin-top: 10px;
+}
+.feedback-link.visible {
+  display: inline-block;
+  opacity: 1;
 }/*# sourceMappingURL=headerfooter.css.map */
