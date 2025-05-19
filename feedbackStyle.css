@@ -5,76 +5,221 @@
 }
 
 body {
-  font-family: sans-serif;
+  font-family: "Arial", sans-serif;
   background-color: #000;
   color: #fff;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  line-height: 1.6;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-link:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: 0.5rem;
+  background: #1db954;
+  color: #fff;
+  text-align: center;
+}
+
+.main-header {
+  background-color: #333;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.main-header nav ul {
+  display: flex;
   justify-content: center;
+  gap: 2rem;
+  list-style: none;
+}
+.main-header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+.main-header nav ul li a:hover, .main-header nav ul li a:focus {
+  background-color: #1db954;
+  text-decoration: none;
+}
+.main-header nav ul li a:hover[aria-current=page], .main-header nav ul li a:focus[aria-current=page] {
+  background-color: #1db954;
+  color: #fff;
 }
 
 .feedback-page {
   width: 100%;
   max-width: 600px;
-  padding: 2rem;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  flex: 1;
 }
 
 .feedback-form {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.5rem;
   background-color: #333;
   padding: 2rem;
   border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 .feedback-form .headeresque {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  position: relative;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 .feedback-form .headeresque h1 {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  margin: 0 auto;
-}
-.feedback-form .headeresque .header-logo {
-  margin-left: auto;
-  width: 30px;
-  height: 30px;
-}
-.feedback-form label {
+  font-size: 2rem;
   color: #fff;
-  font-size: 1rem;
+  margin: 0;
+  text-align: center;
 }
-.feedback-form textarea {
+.feedback-form .headeresque h1 .header-logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.feedback-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.feedback-form .form-group label {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.feedback-form .form-group label textarea {
   resize: vertical;
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  background-color: #000;
+  min-height: 150px;
+  padding: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  background-color: #1a1a1a;
   color: #fff;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+.feedback-form .form-group label textarea:focus {
+  border-color: #1db954;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(29, 185, 84, 0.3);
+}
+.feedback-form .form-group label textarea::-moz-placeholder {
+  color: #ccc;
+  opacity: 0.7;
+}
+.feedback-form .form-group label textarea::placeholder {
+  color: #ccc;
+  opacity: 0.7;
+}
+.feedback-form .form-group label small {
+  color: #ccc;
+  font-size: 0.8rem;
 }
 .feedback-form .actions {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 1rem;
 }
-.feedback-form .actions button {
-  padding: 0.5rem 1rem;
-  background-color: #fff;
-  color: #000;
+.feedback-form .actions .btn-primary {
+  padding: 0.8rem 1.5rem;
+  background-color: #1db954;
+  color: #fff;
   border: none;
   border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
   cursor: pointer;
-  transition: background 0.2s ease;
-  background-color: #ccc;
+  transition: background-color 0.3s;
 }
-.feedback-form .actions .back-link {
+.feedback-form .actions .btn-primary:hover, .feedback-form .actions .btn-primary:focus {
+  background-color: #1ed760;
+  outline: 2px solid #fff;
+}
+.feedback-form .actions .btn-primary .back-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: color 0.3s;
+}
+.feedback-form .actions .btn-primary .back-link:hover, .feedback-form .actions .btn-primary .back-link:focus {
+  color: #1db954;
+  text-decoration: underline;
+  outline: none;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 1.5rem;
+  text-align: center;
+  margin-top: auto;
+}
+footer p {
+  margin-bottom: 1rem;
+}
+footer nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+}
+footer nav ul li a {
   color: #ccc;
   text-decoration: none;
-  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+footer nav ul li a:hover {
+  color: #1db954;
   text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .main-header nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  .feedback-form {
+    padding: 1.5rem;
+  }
+  .feedback-form .actions {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .feedback-form .actions .btn-primary,
+  .feedback-form .actions .back-link {
+    width: 100%;
+    text-align: center;
+  }
+  footer nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }/*# sourceMappingURL=feedbackStyle.css.map */

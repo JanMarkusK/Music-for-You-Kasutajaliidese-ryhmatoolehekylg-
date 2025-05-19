@@ -1,87 +1,238 @@
-//Muutujad värvide jaoks, tegelikult mõttetu imo
+// Värvimuutujad
 $black: #000
 $white: #fff
 $gray: #ccc
 $dark-gray: #333
+$primary-color: #1db954
+$hover-color: #1ed760
+$error-color: #ff3333
 
+// Globaalsed stiilid
 *
    margin: 0
    padding: 0
    box-sizing: border-box
-//Paigutab kõik lehe keskele
+
+// Keha stiilid
 body
-   font-family: sans-serif
+   font-family: 'Arial', sans-serif
    background-color: $black
    color: $white
-   height: 100vh
+   min-height: 100vh
    display: flex
-   align-items: center
-   justify-content: center
+   flex-direction: column
+   line-height: 1.6
 
+// Skip link
+.skip-link
+   position: absolute
+   left: -9999px
+   top: auto
+   width: 1px
+   height: 1px
+   overflow: hidden
+
+   &:focus
+      position: static
+      width: auto
+      height: auto
+      padding: 0.5rem
+      background: $primary-color
+      color: $white
+      text-align: center
+
+// Päis
+.main-header
+   background-color: $dark-gray
+   padding: 1rem
+   position: sticky
+   top: 0
+   z-index: 100
+
+   nav
+      ul
+         display: flex
+         justify-content: center
+         gap: 2rem
+         list-style: none
+
+         li
+            a
+               color: $white
+               text-decoration: none
+               font-weight: bold
+               padding: 0.5rem
+               border-radius: 4px
+               transition: background-color 0.3s
+
+               &:hover,
+               &:focus
+                  background-color: $primary-color
+                  text-decoration: none
+
+                  &[aria-current="page"]
+                     background-color: $primary-color
+                     color: $white
+
+// Peamine sisu
 .feedback-page
    width: 100%
    max-width: 600px
-   padding: 2rem
+   margin: 2rem auto
+   padding: 0 1rem
+   flex: 1
 
-//Paigutab body elemendid õigetesse kohtadesse ja õige suurusega
 .feedback-form
    display: flex
    flex-direction: column
-   gap: 1rem
+   gap: 1.5rem
    background-color: $dark-gray
    padding: 2rem
    border-radius: 8px
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2)
 
    .headeresque
       display: flex
+      flex-direction: column
       align-items: center
-      justify-content: center
-      position: relative
+      gap: 1rem
+      margin-bottom: 1rem
 
       h1
-         position: absolute
-         left: 50%
-         transform: translateX(-50%)
-         margin: 0 auto
+         font-size: 2rem
+         color: $white
+         margin: 0
+         text-align: center
 
-      .header-logo
-         margin-left: auto
-         width: 30px
-         height: 30px
-   
-   label
-      color: $white
-      font-size: 1rem
+         .header-logo
+            width: 60px
+            height: 60px
+            border-radius: 50%
+            object-fit: contain
 
-   textarea
-      resize: vertical
-      padding: 0.5rem
-      border: 1px solid $gray
-      border-radius: 4px
-      background-color: $black
-      color: $white
+   .form-group
+      display: flex
+      flex-direction: column
+      gap: 0.5rem
+
+      label
+         color: $white
+         font-size: 1.1rem
+         font-weight: bold
+
+         textarea
+            resize: vertical
+            min-height: 150px
+            padding: 1rem
+            border: 2px solid $gray
+            border-radius: 6px
+            background-color: lighten($black, 10%)
+            color: $white
+            font-family: inherit
+            font-size: 1rem
+            transition: border-color 0.3s
+
+            &:focus
+               border-color: $primary-color
+               outline: none
+               box-shadow: 0 0 0 2px rgba($primary-color, 0.3)
+
+            &::placeholder
+               color: $gray
+               opacity: 0.7
+
+         small
+            color: $gray
+            font-size: 0.8rem
 
    .actions
       display: flex
       justify-content: space-between
       align-items: center
+      margin-top: 1rem
 
-      button
-         padding: 0.5rem 1rem
-         background-color: $white
-         color: $black
+      .btn-primary
+         padding: 0.8rem 1.5rem
+         background-color: $primary-color
+         color: $white
          border: none
          border-radius: 4px
+         font-size: 1rem
+         font-weight: bold
          cursor: pointer
-         transition: background 0.2s ease
+         transition: background-color 0.3s
 
-         &:hover
-         background-color: $gray
+         &:hover,
+         &:focus
+            background-color: $hover-color
+            outline: 2px solid $white
 
-      .back-link
-         color: $gray
-         text-decoration: none
-         font-size: 0.9rem
+         .back-link
+            color: $white
+            text-decoration: none
+            font-size: 1rem
+            padding: 0.5rem
+            border-radius: 4px
+            transition: color 0.3s
 
-         &:hover
-         text-decoration: underline
+            &:hover,
+            &:focus
+               color: $primary-color
+               text-decoration: underline
+               outline: none
+
+// Jalus
+footer
+   background-color: $dark-gray
+   color: $white
+   padding: 1.5rem
+   text-align: center
+   margin-top: auto
+
+   p
+      margin-bottom: 1rem
+
+   nav
+      ul
+         display: flex
+         justify-content: center
+         gap: 1.5rem
+         list-style: none
+         padding: 0
+
+         li
+            a
+               color: $gray
+               text-decoration: none
+               transition: color 0.3s
+
+               &:hover
+                  color: $primary-color
+                  text-decoration: underline
+
+// Mobiilne disain
+@media (max-width: 768px)
+   .main-header
+      nav
+         ul
+            flex-direction: column
+            gap: 0.5rem
+            align-items: center
+
+   .feedback-form
+      padding: 1.5rem
+
+      .actions
+         flex-direction: column
+         gap: 1rem
+
+         .btn-primary,
+         .back-link
+            width: 100%
+            text-align: center
+
+   footer
+      nav
+         ul
+            flex-direction: column
+            gap: 0.5rem

@@ -1,28 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Feedback</title>
-<link rel="stylesheet" href="feedbackStyle.css" />
-<link rel="icon" type="image/png" href="images/LogoVaike.PNG"> <!-- favicon -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Feedback - Music for You</title>
+    <link rel="stylesheet" href="feedbackStyle.css" />
+    <link rel="icon" type="image/png" href="images/LogoVaike.PNG">
 </head>
 <body>
-<main class="feedback-page">
-   <form class="feedback-form">
-      <div class="headeresque">
-         <h1>Feedback</h1>
-         <img src="images/LogoVaike.PNG" alt="Logo" class="header-logo" /> <!-- logo -->
-      </div>
+    <a href="#maincontent" class="skip-link">Skip to main content</a>
+    
+    <header class="main-header">
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/aboutUs.html">About</a></li>
+                <li><a href="/feedback.html" aria-current="page">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
 
-      <label for="message">Your Message</label>
-      <textarea id="message" name="message" rows="6" required></textarea> <!-- tagasiside sisestamise kast -->
+    <main id="maincontent" class="feedback-page">
+        <form class="feedback-form" aria-label="Feedback form">
+            <div class="headeresque">
+                <h1>Feedback</h1>
+                <img src="images/LogoVaike.PNG" alt="Music for You logo" class="header-logo" />
+            </div>
 
-      <div class="actions">
-         <button type="submit">Submit</button>
-         <a href="/" class="back-link">Back to Home</a> <!-- viib tagasi main lehte -->
-      </div>
-   </form>
-</main>
+            <div class="form-group">
+                <label for="message">Your Message</label>
+                <textarea 
+                    id="message" 
+                    name="message" 
+                    rows="6" 
+                    required
+                    aria-describedby="messageHelp"
+                    placeholder="Please share your feedback with us"></textarea>
+                <small id="messageHelp">We appreciate your honest feedback</small>
+            </div>
+
+            <div class="actions">
+                <button type="submit" class="btn-primary">Submit</button>
+                <a href="/" class="back-link">Back to Home</a>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Music for You</p>
+        <nav aria-label="Footer links">
+            <ul>
+                <li><a href="/privacy">Privacy Policy</a></li>
+                <li><a href="/terms">Terms of Service</a></li>
+            </ul>
+        </nav>
+    </footer>
 </body>
 </html>

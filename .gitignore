@@ -1,0 +1,13 @@
+# Sass vahefailid
+*.css.map
+
+# Süsteemifailid
+.DS_Store
+Thumbs.db
+
+# IDE seaded
+.vscode/
+.idea/
+
+# Node.js sõltuvused (kui kasutate)
+node_modules/

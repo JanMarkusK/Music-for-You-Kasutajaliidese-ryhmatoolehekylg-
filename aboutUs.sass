@@ -3,73 +3,196 @@ $black: #000
 $white: #fff
 $gray: #ccc
 $dark-gray: #333
+$primary-color: #1db954 // Spotify roheline muusikalehele
+$hover-color: #1ed760
 
 // Globaalne stiil, mis rakendub kõigile elementidele
-
 *
     margin: 0
     padding: 0
     box-sizing: border-box
 
-body // Keha stiilid
-
-    font-family: sans-serif
+// Keha stiilid
+body
+    font-family: 'Arial', sans-serif
     background-color: $black
     color: $white
     min-height: 100vh
     display: flex
-    align-items: center
-    justify-content: center
-    padding: 1rem
+    flex-direction: column
+    line-height: 1.6
 
+// Skip link - juurdepääsetavuse jaoks
+.skip-link
+    position: absolute
+    left: -9999px
+    top: auto
+    width: 1px
+    height: 1px
+    overflow: hidden
+
+    &:focus
+        position: static
+        width: auto
+        height: auto
+        padding: 0.5rem
+        background: $primary-color
+        color: $white
+        text-align: center
+
+// Päise stiilid
+.main-header
+    background-color: $dark-gray
+    padding: 1rem
+    position: sticky
+    top: 0
+    z-index: 100
+
+    nav
+        ul
+            display: flex
+            justify-content: center
+            gap: 2rem
+            list-style: none
+
+            li
+                a
+                    color: $white
+                    text-decoration: none
+                    font-weight: bold
+                    padding: 0.5rem
+                    border-radius: 4px
+                    transition: background-color 0.3s
+
+                    &:hover,
+                    &:focus
+                        background-color: $primary-color
+                        text-decoration: none
+
+                    &[aria-current="page"]
+                        background-color: $primary-color
+                        color: $white
+
+// Peamine sisu
 .about-page
     width: 100%
-    max-width: 480px
-    display: flex
-    justify-content: center
+    max-width: 800px
+    margin: 2rem auto
+    padding: 0 1rem
+    flex: 1
 
 .about-container
     display: flex
     flex-direction: column
-    gap: 1rem
+    gap: 1.5rem
     background-color: $dark-gray
     padding: 2rem
     border-radius: 8px
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2)
 
-.headeresque // .headeresque klassi stiilid (pealkirja ja logo paigutus)
+// Pealkirja ja logo paigutus
+.headeresque
     display: flex
     align-items: center
     justify-content: center
-    gap: 0.5rem
+    gap: 1rem
+    margin-bottom: 1rem
 
     h1
-        font-size: 1.5rem
+        font-size: 2rem
         color: $white
         margin: 0
+        text-align: center
 
     .header-logo
-        width: 40px
-        height: 40px
+        width: 60px
+        height: 60px
+        border-radius: 50%
+        object-fit: contain
 
-.about-content // kasti stiilid
+// Sisualastyle
+.about-content
     p
-        margin-bottom: 1rem
-        line-height: 1.5
+        margin-bottom: 1.5rem
+        line-height: 1.6
         color: $white
+        font-size: 1.1rem
 
     strong
-        color: $gray
+        color: $primary-color
+        font-weight: bold
 
-    // .back-link klassi stiilid (tagasi lingi stiil)
-
+// Tagasi link
 .back-link
-    display: block
+    display: inline-block
     text-align: center
-    color: $gray
+    color: $white
+    background-color: $primary-color
     text-decoration: none
     font-size: 1rem
+    padding: 0.8rem 1.5rem
+    border-radius: 4px
     margin-top: 1rem
+    transition: background-color 0.3s
+    border: none
+    cursor: pointer
 
-    &:hover     // Hover efekt lingi puhul
-        text-decoration: underline
+    &:hover,
+    &:focus
+        background-color: $hover-color
+        text-decoration: none
+        outline: 2px solid $white
+
+// Jaluse stiilid
+footer
+    background-color: $dark-gray
+    color: $white
+    padding: 1.5rem
+    text-align: center
+    margin-top: auto
+
+    p
+        margin-bottom: 1rem
+
+    nav
+        ul
+            display: flex
+            justify-content: center
+            gap: 1.5rem
+            list-style: none
+            padding: 0
+
+            li
+                a
+                    color: $gray
+                    text-decoration: none
+                    transition: color 0.3s
+
+                    &:hover
+                        color: $primary-color
+                        text-decoration: underline
+
+// Mobiilne disain
+@media (max-width: 768px)
+    .main-header
+        nav
+            ul
+                flex-direction: column
+                gap: 0.5rem
+                align-items: center
+
+    .headeresque
+        flex-direction: column
+        text-align: center
+
+        h1
+            font-size: 1.8rem
+
+    .about-container
+        padding: 1.5rem
+
+    footer
+        nav
+            ul
+                flex-direction: column
+                gap: 0.5rem
